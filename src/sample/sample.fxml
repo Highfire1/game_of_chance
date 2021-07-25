@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchor_pane" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox layoutX="72.0" layoutY="90.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="136.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="story_label" alignment="TOP_LEFT" prefHeight="400.0" prefWidth="200.0">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <VBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="518.0">
+               <children>
+                  <ImageView fx:id="image_id" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></ImageView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="money_label_prefix" text="Wallet: $" textAlignment="CENTER" />
+                        <Label fx:id="money_label" text="1500" textAlignment="CENTER">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets right="5.0" top="5.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="roll_dice_button" mnemonicParsing="false" onAction="#roll_dice_method" prefHeight="25.0" text="Explore Las Vegas">
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                    <MenuItem disable="true" mnemonicParsing="false" text="welcome to the matrix" />
+                                  <MenuItem mnemonicParsing="false" onAction="#hack_increment_money" text="+$$$" />
+                                    <MenuItem mnemonicParsing="false" onAction="#hack_increment_stage" text="+stage" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu></Button>
+                        <Label fx:id="roll_dice_label" prefHeight="25.0">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
